@@ -103,7 +103,12 @@ public:
   string Decode(shared_ptr<freq_info> root, string input);
 
   // you can add add more public member variables and member functions here if you need
+  
+  //helper function for BuildEncodingTable
+  void traverseTree(shared_ptr<freq_info> node, string code, map<char, string>& encoding_table);
 
+  //helper function for BuildTree
+  shared_ptr<freq_info> CreateInternalNode(shared_ptr<freq_info> left, shared_ptr<freq_info> right);
 private:
   // you can add add more private member variables and member functions here if you need
 };
